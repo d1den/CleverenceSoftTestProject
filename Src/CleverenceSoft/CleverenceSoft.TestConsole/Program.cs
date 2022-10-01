@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using CleverenceSoft.Tasks;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using CleverenceSoft.Tasks;
 
 namespace CleverenceSoft.TestConsole
 {
@@ -15,7 +12,12 @@ namespace CleverenceSoft.TestConsole
             RunLoopToExitFromApplication();
 
             // Раскомментировать для демонстрации работы первого задания
-            //RunCounterServerExample();
+            RunCounterServerExample();
+
+            // Раскомментировать для демонстрации работы второго задания
+            //RunAcyncCallerExample(1000, 500);
+
+            Console.ReadKey();
         }
 
         /// <summary>
@@ -59,6 +61,31 @@ namespace CleverenceSoft.TestConsole
                 }
             }
         }
+
+        /// <summary>
+        /// Запустить пример работы Обёртки для "полусинхронного" вызова делегатов EventHandler
+        /// </summary>
+        /// <param name="cancellationTime">Время до отмены выполнения делегата</param>
+        /// <param name="eventHandlerExecutionTime">Время выполнения делегата</param>
+        private static void RunAcyncCallerExample(int eventHandlerExecutionTime, int cancellationTime)
+        {
+            var eventHandler = new EventHandler((sender, e) =>
+            {
+                Console.WriteLine("Big work in EventHandler started...");
+                Thread.Sleep(eventHandlerExecutionTime);
+            });
+
+            var asyncCaller = new AsyncCaller(eventHandler);
+            if (!asyncCaller.Invoke(cancellationTime, null, EventArgs.Empty))
+            {
+                Console.WriteLine("Time out!");
+            }
+            else
+            {
+                Console.WriteLine("Delegate completed successfully!");
+            }
+        }
+
 
         /// <summary>
         /// Выполнить действие в задаче с случайной задержкой потока
