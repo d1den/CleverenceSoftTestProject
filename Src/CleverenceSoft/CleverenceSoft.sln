@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverenceSoft.Tasks", "CleverenceSoft.Tasks\CleverenceSoft.Tasks.csproj", "{11FD9AFF-5D81-4761-A4F5-D84BD7801F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleverenceSoft.TestConsole", "CleverenceSoft.TestConsole\CleverenceSoft.TestConsole.csproj", "{48AE3B21-8850-4A80-AE47-322C69D02E4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11FD9AFF-5D81-4761-A4F5-D84BD7801F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FD9AFF-5D81-4761-A4F5-D84BD7801F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FD9AFF-5D81-4761-A4F5-D84BD7801F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FD9AFF-5D81-4761-A4F5-D84BD7801F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48AE3B21-8850-4A80-AE47-322C69D02E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48AE3B21-8850-4A80-AE47-322C69D02E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48AE3B21-8850-4A80-AE47-322C69D02E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48AE3B21-8850-4A80-AE47-322C69D02E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E69DD800-735D-412A-9CF2-14823A14EE56}
+	EndGlobalSection
+EndGlobal
